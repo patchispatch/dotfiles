@@ -78,6 +78,8 @@ let g:vim_markdown_math = 1
 Plugin 'scrooloose/nerdtree'
 " Launch with Ctrl-n
 map <C-n> :NERDTreeToggle<CR>
+" Close vim when the only window open is NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Git integration in NERDTree
 Plugin 'Xuyuanp/nerdtree-git-plugin'
@@ -98,6 +100,12 @@ Plugin 'majutsushi/tagbar'
 " Launch with F8
 execute "set <F8>=\e[19~"
 map <F8> :Tagbar<CR>
+
+" Twig extension
+Plugin 'lumiliet/vim-twig'
+
+" YouCompleteMe, code completion
+Plugin 'ycm-core/YouCompleteMe'
 
 " Vim markdown table of contents
 Plugin 'mzlogin/vim-markdown-toc'

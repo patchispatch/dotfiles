@@ -40,6 +40,8 @@ alias cat=bat
 alias ls=exa
 # Fuck: Magnificent app which corrects your previous console command https://github.com/nvbn/thefuck 
 eval $(thefuck --alias)
+# ncpamixer: ncurses PulseAudio Mixer https://github.com/fulhax/ncpamixer
+alias sound=ncpamixer
 
 # ------------------------------------------------------------------------------
 # PATH
